@@ -3,23 +3,24 @@
         export let title = ''
         export let description = ''
         export let color = 'red';
-        export let descriptionEl;
+        export let iconName = 'feather'
+        export let backgroundColor = 'auto'
 </script>
 
-<div class="subject">
+<div class="subject" style:background-color={backgroundColor}>
     <div class="text-and-icon">
    <div class="subject-text">
             <p class="subject-title" style:color>{title}</p>
-            <p class="subject-description" bind:this={descriptionEl}>
+            <p class="subject-description">
                 {@html description}
                
             </p>
           </div>
 <div class="icon" style:background-color={color}>
-<Feather icon="feather" size="70" />
+<Feather icon={iconName} size="70" />
 </div>
    </div>
-            <a href="#" class="more" style:color>Ver Mas</a>
+            <a href={title} class="more" style:color>Ver Mas</a>
 </div>
 <style>
             @media (max-width: 34em){
@@ -43,9 +44,7 @@
     .text-and-icon{
         padding: 3rem;
         display: flex;
-        /*justify-content: space-around;*/
         width:100vw;
-       /* background-color: rgba(201,201,201,0.7);*/
         font-size: 30px;
         justify-content: space-between;
         align-items:center;
