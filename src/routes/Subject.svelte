@@ -67,7 +67,7 @@
         flex-direction: column;
     }
     .subject-title{
-            font-size: 77.4px;
+            font-size: 7.74rem;
     font-weight: 600;
     margin-bottom: 1.2rem;
     }

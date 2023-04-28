@@ -1,21 +1,26 @@
 <script>
-    import IntersectionObserver from "svelte-intersection-observer";
-
+    export let title;
+    export let imgSrc;
 </script>
 <div class='fixed-div'>
-    <div class="header">
+    <div class="header" style:background-image={`url('${imgSrc}')`}>
    <div class="header__text-box">
                 <h1 class="heading-primary">
-                    <span class="heading-primary--main">TLRIID</span>
+                    <span class="heading-primary--main">{title}</span>
                 </h1>
             </div>
     </div>
 </div>
-
+<div class="content">
+    <slot></slot>
+</div>
 <svelte:window />
 
 
 <style>
+     .content{
+        margin-top:15vh;
+    }
     .fixed-div{
           transition: all 3s ease-in-out;
         position: fixed;
@@ -25,17 +30,10 @@
     }
 	.header {
 		height: 10vh;
-		background-image: 
-			url(/TLRIID/books.jpg);
         box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
     position: relative;
 		background-size: cover;
 		background-position: center;
-	}
-	@media (max-width: 768px) {
-		.header {
-			height: 100vh;
-		}
 	}
     .header__text-box{
     position: absolute;
