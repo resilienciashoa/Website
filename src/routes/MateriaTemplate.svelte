@@ -12,24 +12,14 @@
 		</div>
 	</div>
 </div>
-<div class="content">
+<div class="slot">
 	<slot />
 </div>
 <svelte:window />
 
 <style>
-	.content {
-		margin-top: 15vh;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(64px, 100%/3)), 1fr));
-		justify-items: center;
-		row-gap: 5rem;
-	}
-	@media (max-width: 34em) {
-		.content {
-			grid-template-columns: 1fr;
-			/* gap: 5rem;*/
-		}
+	.slot {
+		margin-top: 10vh;
 	}
 	.fixed-div {
 		transition: all 3s ease-in-out;
