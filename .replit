@@ -1,5 +1,5 @@
-run = "npm run dev"
-#run = ""
+#run = "npm run dev"
+run = ""
 
 [nix]
 channel = "stable-22_11"
