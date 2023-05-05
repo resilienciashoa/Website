@@ -15,7 +15,7 @@
 
 	export let data;
 	let { materia, materiaImgSrc } = data;
-	let images = ['/masada.jpg', '/test.jpg'];
+	let images = [{src: '/masada.jpg'}, {src: '/test2.jpg', thumbImgMargin: '-50px 0px 0px -20px', thumbImgWidth: '200%',}];
 	let mainSlide;
 	let thumbnailSlide;
 	let mainOptions = {
@@ -52,7 +52,7 @@
 
 	function setModalImg() {
 		const modal = document.querySelector('.modalWindow');
-		const imageSrc = images[mainSplide.index];
+		const imageSrc = images[mainSplide.index].src;
 		modal.style.backgroundImage = `url('${imageSrc}')`;
 		setModalClose();
 	}
@@ -81,7 +81,7 @@
 			close.style.marginTop = `${bgPosY}px`;
 			close.style.marginRight = `${bgPosX}px`;
 		};
-		img.src = images[mainSplide.index];
+		img.src = images[mainSplide.index].src;
 	}
 </script>
 
@@ -89,23 +89,28 @@
 <Modal on:open={setModalImg} classWindow="modalWindow" show={$modal} />
 <MateriaTemplate title={materia} imgSrc={materiaImgSrc}>
 	<div class="content">
+    <div class="content-center">
 		{#if browser}
 			<Splide class="mainSlide" bind:this={mainSlide} options={mainOptions}>
 				{#each images as image}
 					<SplideSlide>
-						<img on:click={showModal} src={image} />
+						<img on:click={showModal} src={image.src} />
 					</SplideSlide>
 				{/each}
 			</Splide>
 			<Splide bind:this={thumbnailSlide} options={thumbnailOptions}>
 				{#each images as image}
 					<SplideSlide>
-						<img src={image} />
+						<img style:margin={image.thumbImgMargin} style:width={image.thumbImgWidth} src={image.src} />
 					</SplideSlide>
 				{/each}
 			</Splide>
 		{/if}
-		<h1>{data.title}</h1>
+    </div>
+		<div class="padding">
+			<p class="title">Mamparas</p>
+			<p class="description">Pequeño museo a la entrada y a la salida de la presentación mostrando todo el trabajo fisico realizado durante el proyecto.</p>
+		</div>
 	</div>
 </MateriaTemplate>
 
@@ -114,7 +119,7 @@
 		padding-top: 2vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		/*align-items: center;*/
 	}
 	.carousel {
 		width: 50%;
@@ -136,22 +141,24 @@
 	}
 	:global(.mainSlide.splide) {
 		padding: 0 !important;
-	}
+    }
+    .content-center{
+        align-self: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 	:global(.mainSlide .splide__slide) {
 		display: flex;
 		justify-content: center;
 	}
 	:global(.modalWindow) {
-		/* background-image: url('/test.jpg') !important; */
-		/* background-color: rgb(198, 196, 196) !important; */
-		/* Transparent background color */
 		background-color: rgba(0, 0, 0, 0) !important;
 		width: 90vw !important;
 		height: 90vh !important;
 		background-size: contain !important;
 		background-repeat: no-repeat !important;
 		background-position: center !important;
-		/* background-size: cover !important; */
-		/* width: 100vw !important; */
 	}
+
 </style>
