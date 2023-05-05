@@ -1,4 +1,5 @@
 <script>
+	import Feather from 'sveltekit-feather-icons/feather.svelte';
 	import Modal, { bind } from 'svelte-simple-modal';
 	import { writable } from 'svelte/store';
 	import BigImage from './BigImage.svelte';
@@ -14,8 +15,7 @@
 	import '@splidejs/splide/css/sea-green';
 
 	export let data;
-	let { materia, materiaImgSrc } = data;
-	let images = [{src: '/masada.jpg'}, {src: '/test2.jpg', thumbImgMargin: '-50px 0px 0px -20px', thumbImgWidth: '200%',}];
+	let { title, materia, materiaImgSrc, images, description } = data;
 	let mainSlide;
 	let thumbnailSlide;
 	let mainOptions = {
@@ -89,27 +89,37 @@
 <Modal on:open={setModalImg} classWindow="modalWindow" show={$modal} />
 <MateriaTemplate title={materia} imgSrc={materiaImgSrc}>
 	<div class="content">
-    <div class="content-center">
-		{#if browser}
-			<Splide class="mainSlide" bind:this={mainSlide} options={mainOptions}>
-				{#each images as image}
-					<SplideSlide>
-						<img on:click={showModal} src={image.src} />
-					</SplideSlide>
-				{/each}
-			</Splide>
-			<Splide bind:this={thumbnailSlide} options={thumbnailOptions}>
-				{#each images as image}
-					<SplideSlide>
-						<img style:margin={image.thumbImgMargin} style:width={image.thumbImgWidth} src={image.src} />
-					</SplideSlide>
-				{/each}
-			</Splide>
-		{/if}
-    </div>
+		<div class="content-center">
+			{#if browser}
+				<p class="zoomText">
+					<Feather icon="zoom-in" size="15" /> Haz click en la imagen para agrandar
+				</p>
+				<Splide class="mainSlide" bind:this={mainSlide} options={mainOptions}>
+					{#each images as image}
+						<SplideSlide>
+							<img on:click={showModal} src={image.src} />
+						</SplideSlide>
+					{/each}
+				</Splide>
+
+				<Splide bind:this={thumbnailSlide} options={thumbnailOptions}>
+					{#each images as image}
+						<SplideSlide>
+							<img
+								style:margin={image.thumbImgMargin}
+								style:width={image.thumbImgWidth}
+								src={image.thumbSrc}
+							/>
+						</SplideSlide>
+					{/each}
+				</Splide>
+			{/if}
+		</div>
 		<div class="padding">
-			<p class="title">Mamparas</p>
-			<p class="description">Pequeño museo a la entrada y a la salida de la presentación mostrando todo el trabajo fisico realizado durante el proyecto.</p>
+			<p class="title">{title}</p>
+			<p class="description">
+				{description}
+			</p>
 		</div>
 	</div>
 </MateriaTemplate>
@@ -141,13 +151,13 @@
 	}
 	:global(.mainSlide.splide) {
 		padding: 0 !important;
-    }
-    .content-center{
-        align-self: center !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+	}
+	.content-center {
+		align-self: center !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	:global(.mainSlide .splide__slide) {
 		display: flex;
 		justify-content: center;
@@ -160,5 +170,26 @@
 		background-repeat: no-repeat !important;
 		background-position: center !important;
 	}
+	.padding {
+		padding: 1rem 0rem 1rem 2rem;
+	}
 
+	.title {
+		font-size: 2.4rem;
+		/* color: #333; */
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+
+	.description {
+		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+	}
+	.zoomText {
+		font-size: 1rem;
+		display: flex;
+		margin-bottom: 1rem;
+	}
 </style>
