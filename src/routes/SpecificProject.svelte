@@ -22,7 +22,7 @@
 	<div class="content">
 		<div class="padding">
 			<p class="title">{title}</p>
-			<p class="description">{description}</p>
+			<p class="description">{@html description}</p>
 		</div>
 		<a on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave} href={url}
 			><Feather icon="chevron-down" size="25" /></a
@@ -37,6 +37,7 @@
 		overflow: hidden;
 		transition: all 0.4s;
 		width: 27rem;
+        background-color: #6b6b6b;
 	}
 
 	/* .specific-project:hover {
@@ -44,13 +45,20 @@
 		box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 	} */
 	.padding {
-		padding: 1rem 0rem 1rem 2rem;
+		display: flex;
+    padding: 1rem 0rem 1rem 2rem;
+    flex-direction: column;
+    height: 100%;
 	}
 	.content {
 		/* border: 3px solid #6b6b6b;
 		border-top: 0px; */
 		background-color: #6b6b6b;
 		color: #fff;
+        height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 	}
 
 	.title {
