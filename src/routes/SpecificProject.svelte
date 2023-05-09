@@ -24,10 +24,10 @@
 			<p class="title">{title}</p>
 			<p class="description">{@html description}</p>
 		</div>
-		<a on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave} href={url}
-			><Feather icon="chevron-down" size="25" /></a
-		>
 	</div>
+	<a on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave} href={url}
+		><Feather icon="chevron-down" size="25" /></a
+	>
 </div>
 
 <style>
@@ -37,7 +37,10 @@
 		overflow: hidden;
 		transition: all 0.4s;
 		width: 27rem;
-        background-color: #6b6b6b;
+		background-color: #6b6b6b;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	/* .specific-project:hover {
@@ -46,19 +49,20 @@
 	} */
 	.padding {
 		display: flex;
-    padding: 1rem 0rem 1rem 2rem;
-    flex-direction: column;
-    height: 100%;
+		padding: 1rem 0rem 1rem 2rem;
+		flex-direction: column;
 	}
 	.content {
+		flex: 1;
+
 		/* border: 3px solid #6b6b6b;
 		border-top: 0px; */
 		background-color: #6b6b6b;
 		color: #fff;
-        height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+		/* height: 50%; */
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-between; */
 	}
 
 	.title {
@@ -85,9 +89,7 @@
 	/* display a as button */
 	a:link,
 	a:visited {
-		display: block;
 		width: 100%;
-		height: 3rem;
 		/* background-color: #6b6b6b; */
 		color: #fff;
 		display: flex;

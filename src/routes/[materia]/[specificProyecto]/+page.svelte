@@ -21,33 +21,36 @@
 	let mainOptions = {
 		type: 'fade',
 		rewind: true,
-		//cover: true,
+		// cover: true,
 		width: 500,
 		height: '25rem',
 		pagination: false,
 		arrows: false
 	};
 	let thumbnailOptions = {
-		fixedWidth: 100,
-		fixedHeight: 60,
+		perPage: 3,
+		width: 500,
+		height: '5rem',
+		focus: 'center',
+		/* fixedWidth: 100,
+		fixedHeight: 60, */
 		gap: 10,
 		rewind: true,
 		pagination: false,
-		cover: true,
-		isNavigation: true,
-		breakpoints: {
+		// cover: true,
+		isNavigation: true
+		/* breakpoints: {
 			600: {
 				fixedWidth: 60,
 				fixedHeight: 44
 			}
-		}
+		} */
 	};
 	let mainSplide;
 	onMount(() => {
 		mainSplide = mainSlide?.splide;
 		let thumbnailSplide = thumbnailSlide?.splide;
-
-		console.log(mainSplide.sync(thumbnailSplide));
+		mainSplide.sync(thumbnailSplide);
 	});
 
 	function setModalImg() {
@@ -116,10 +119,14 @@
 			{/if}
 		</div>
 		<div class="padding">
-			<p class="title">{title}</p>
-			<p class="description">
-				{description}
-			</p>
+			{#if title}
+				<p class="title">{title}</p>
+			{/if}
+			{#if description}
+				<p class="description">
+					{@html description}
+				</p>
+			{/if}
 		</div>
 	</div>
 </MateriaTemplate>
@@ -143,10 +150,15 @@
 		border: none !important;
 	}
 	:global(.splide__slide) {
-		border: none !important;
+		/* border: none !important; */
+		display: flex;
+		justify-content: center;
 	}
 	:global(.mainSlide img) {
 		border: 5px black solid !important;
+		border-radius: 10px !important;
+	}
+	:global(img) {
 		border-radius: 10px !important;
 	}
 	:global(.mainSlide.splide) {
@@ -183,13 +195,22 @@
 
 	.description {
 		font-size: 1.8rem;
-		display: flex;
-		align-items: center;
-		gap: 1.6rem;
 	}
 	.zoomText {
 		font-size: 1rem;
 		display: flex;
 		margin-bottom: 1rem;
+	}
+	:global(.description p) {
+		margin-bottom: 1rem;
+	}
+	:global(.description ul) {
+		margin-left: 5rem;
+		margin-top: -0.7rem;
+		margin-bottom: 1rem;
+	}
+	:global(.description a:link, .description a:visited) {
+		text-decoration: none;
+		color: #0c8599;
 	}
 </style>
