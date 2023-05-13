@@ -9,36 +9,36 @@ export function load({ params }) {
 		obj.specificProjects = [
 			{
 				title: 'Autores en el Holocausto',
-				imgSrc: '/TLRIID/8.png',
+				imgSrc: '/TLRIID/7.png',
 				imgMargin: '-7% 0px 0px -40%',
 				imgWidth: '180%',
 				description: 'Biografías y reseñas de sus obras.',
 				url: '/TLRIID/Autores-en-el-Holocausto'
 			},
 			{
-				title: 'Para que Escribir',
-				imgSrc: '/TLRIID/14.png',
+				title: '¿Para qué escribir?',
+				imgSrc: '/TLRIID/13.png',
 				imgMargin: '-10% 0px 0px -38%',
 				imgWidth: '180%',
 				description:
 					'¿Cuál es la intención de los autores al escribir? <br> ¿La literatura es denuncia o testimonio?',
-				url: '/TLRIID/mamparas'
+				url: '/TLRIID/Para-que-escribir'
 			},
 			{
 				title: 'Géneros Utilizados',
-				imgSrc: '/TLRIID/19.png',
+				imgSrc: '/TLRIID/18.png',
 				imgMargin: '-5.2% 0px 0px -15%',
 				imgWidth: '180%',
 				description: '¿Cuál fue el género más utilizado? ¿Por qué?',
-				url: '/TLRIID/mamparas'
+				url: '/TLRIID/Generos-Utilizados'
 			},
 			{
 				title: 'Autores tras el Holocausto',
-				imgSrc: '/TLRIID/22.png',
+				imgSrc: '/TLRIID/21.png',
 				imgMargin: '-9% 0px 0px -27%',
 				imgWidth: '160%',
 				description: '¿Cuál fue el género más utilizado? ¿Por qué?',
-				url: '/TLRIID/mamparas'
+				url: '/TLRIID/Autores-tras-el-Holocausto'
 			},
 			{
 				title: 'Artistas relacionados al Holocausto',
@@ -47,7 +47,7 @@ export function load({ params }) {
 				imgWidth: '150%',
 				description:
 					'Líneas del tiempo e Infografías sobre diferentes tipos de artistas relacionados al Holocausto',
-				url: '/TLRIID/mamparas'
+				url: '/TLRIID/Artistas-relacionados-al-Holocausto'
 			}
 		];
 	} else {

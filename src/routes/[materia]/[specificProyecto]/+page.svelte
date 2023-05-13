@@ -111,7 +111,7 @@
 							<img
 								style:margin={image.thumbImgMargin}
 								style:width={image.thumbImgWidth}
-								src={image.thumbSrc}
+								src={image.thumbSrc || image.src}
 							/>
 						</SplideSlide>
 					{/each}

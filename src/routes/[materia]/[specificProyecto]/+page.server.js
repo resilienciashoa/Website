@@ -8,19 +8,35 @@ export function load({ params }) {
 			obj.title = 'Autores en el Holocausto';
 			obj.description = TLRIID['Autores-en-el-Holocausto'];
 			obj.images = new Array(8).fill(undefined).map((_, i) => ({
-				src: `/TLRIID/${i + 4}.png`,
-				thumbSrc: `/TLRIID/${i + 4}.png`
+				src: `/TLRIID/${i + 3}.png`
 			}));
-			/* obj.images = [
-				{ src: '/masada.jpg', thumbSrc: '/masada.jpg' },
-				{
-					src: '/test2.jpg',
-					thumbSrc: '/test2thumb.jpg',
-					thumbImgMargin: '-50px 0px 0px -20px',
-					thumbImgWidth: '200%'
-				}
-			]; */
 		}
+		if (params.specificProyecto === 'Para-que-escribir') {
+			obj.title = '¿Para qué escribir?';
+			obj.description = TLRIID['Para-que-escribir'];
+			obj.images = new Array(5).fill(undefined).map((_, i) => ({
+				src: `/TLRIID/${i + 12}.png`
+			}));
+		}
+		if (params.specificProyecto === 'Generos-Utilizados') {
+			obj.title = 'Géneros Utilizados';
+			obj.description = TLRIID['Generos-Utilizados'];
+			obj.images = new Array(2).fill(undefined).map((_, i) => ({
+				src: `/TLRIID/${i + 17}.png`
+			}));
+		}
+		if (params.specificProyecto === 'Autores-tras-el-Holocausto') {
+			obj.title = 'Autores tras el Holocausto';
+			obj.description = TLRIID['Autores-tras-el-Holocausto'];
+			obj.images = new Array(3).fill(undefined).map((_, i) => ({
+				src: `/TLRIID/${i + 19}.png`
+			}));
+		}
+		if (params.specificProyecto === 'Artistas-relacionados-al-Holocausto') {
+			obj.title = 'Artistas relacionados al Holocausto';
+			obj.description = TLRIID['Artistas-relacionados-al-Holocausto'];
+			obj.images = [{ src: '/TLRIID/Artistas.jpg' }, { src: '/TLRIID/Artistas2.png' }];
+		}
+		return obj;
 	}
-	return obj;
 }
