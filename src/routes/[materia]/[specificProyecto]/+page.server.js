@@ -170,7 +170,8 @@ export function load({ params }) {
 		obj.materiaImgSrc = '/CEM/72.jpg';
 		if (params.specificProyecto === 'CEM') {
 			obj.title = 'Visita al museo';
-			obj.description = Ingles['Poema-Inicial'];
+			obj.description =
+				'<p>Salida de Campo al Centro de Estudios Multisensorial Sobre el Holocausto ubicado en la Sefaradi.</p>';
 			obj.images = new Array(92).fill(undefined).map((_, i) => ({
 				src: `/CEM/${i + 1}.jpg`
 			}));

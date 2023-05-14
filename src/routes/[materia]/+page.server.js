@@ -151,6 +151,20 @@ export function load({ params }) {
 				url: '/Inglés/Interpretación-de-Testimonios'
 			}
 		];
+	} else if (materia === 'Museo') {
+		obj.title = 'Museo';
+		obj.imgSrc = '/CEM/72.jpg';
+		obj.hoverColor = '#000';
+		obj.specificProjects = [
+			{
+				title: 'CEM',
+				imgSrc: '/CEM/2.jpg',
+				imgMargin: '-12% 0px 0px 0%',
+				imgWidth: '110%',
+				description: 'Centro de Estudios Multisensorial Sobre el Holocausto',
+				url: '/Museo/CEM'
+			}
+		];
 	} else {
 		obj.title = 'ERROR';
 		obj.imgSrc = '/TLRIID/books.jpg';
