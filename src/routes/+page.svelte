@@ -46,6 +46,7 @@
 		text-align: center;
 		display: block;
 		color: #d9480f;
+		/* background-color: #f2f2f2; */
 		font-size: 2rem;
 		text-decoration: none;
 		/* border-bottom: 1px solid currentColor; */
