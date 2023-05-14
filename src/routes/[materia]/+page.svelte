@@ -21,7 +21,7 @@
 		justify-items: center;
 		row-gap: 5rem;
 	}
-	@media (max-width: 34em) {
+	@media (max-width: 45em) {
 		.content {
 			grid-template-columns: 1fr;
 			/* gap: 5rem;*/

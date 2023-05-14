@@ -3,9 +3,10 @@ export function load() {
 	subjects.push({
 		iconName: 'feather',
 		color: '#37b24d',
-		title: 'TLRIID',
+		title: 'Lectura y Redacción',
 		description:
-			'Investigación sobre los principales autores y obras acerca del Holocausto, ademas de un análisis de los géneros literarios y las motivaciones al escribir. <br> Tambien un pequeño estudio sobre el debate acerca de la ficcion historica en el Holocausto y reseñas sobre los libros leídos en clase.'
+			'Investigación sobre los principales autores y obras acerca del Holocausto, ademas de un análisis de los géneros literarios y las motivaciones al escribir. <br> Tambien un pequeño estudio sobre el debate acerca de la ficcion historica en el Holocausto y reseñas sobre los libros leídos en clase.',
+		link: 'TLRIID'
 	});
 	subjects.push({
 		iconName: 'hash',
@@ -21,21 +22,21 @@ export function load() {
 		description:
 			'Composición de “miniobra de teatro” que trata de una entrevista en la cual tres sobrevivientes de los campos de concentración platican sus experiencias, junto con un video introductorio al tema del proyecto. <br> Además de una serie de cartulinas que abarcan el marco teorico del holocausto.'
 	});
-    subjects.push({
+	subjects.push({
 		iconName: 'compass',
 		color: '#0ca678',
 		title: 'Inglés',
 		description:
 			'Coordinación general de todas las etapas del proyecto, escenificación de la presentación general y distribución del pequeño museo. <br> También documentación completa del proyecto incluyendo un sitio web con descripciones e imágenes.'
 	});
-     subjects.push({
+	subjects.push({
 		iconName: 'filter',
 		color: '#ae3ec9',
 		title: 'Química',
 		description:
 			'Investigación sobre los macronutrientes y micronutrientes y ejemplos y que aportan al organismo, también se investigó sobre las calorías necesarias de una persona para sobrevivir y la dieta de la gente en los campos de concentración.'
 	});
-    subjects.push({
+	subjects.push({
 		iconName: 'hard-drive',
 		color: '#4263eb',
 		title: 'Computación',

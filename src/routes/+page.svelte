@@ -35,9 +35,25 @@
 <Modal closeOnEsc={false} closeOnOuterClick={false} closeButton={false} show={$modal} />
 
 <Header />
+<a href="/Museo/CEM">Visita al Museo &rarr;</a>
 {#each data.subjects as subject}
 	<Subject {...subject} />
 {/each}
 
 <style>
+	a:link,
+	a:visited {
+		text-align: center;
+		display: block;
+		color: #d9480f;
+		font-size: 2rem;
+		text-decoration: none;
+		/* border-bottom: 1px solid currentColor; */
+		/* padding-bottom: 2px; */
+		transition: all 0.3s;
+	}
+	a:hover,
+	a:active {
+		color: #000;
+	}
 </style>

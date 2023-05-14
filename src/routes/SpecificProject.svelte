@@ -22,7 +22,9 @@
 	<div class="content">
 		<div class="padding">
 			<p class="title">{title}</p>
-			<p class="description">{@html description}</p>
+			{#if description}
+				<p class="description">{@html description}</p>
+			{/if}
 		</div>
 	</div>
 	<a on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave} href={url}

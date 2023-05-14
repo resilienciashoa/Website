@@ -3,15 +3,17 @@
 	export let imgSrc;
 </script>
 
-<div class="fixed-div">
-	<div class="header" style:background-image={`url('${imgSrc}')`}>
-		<div class="header__text-box">
-			<h1 class="heading-primary">
-				<span class="heading-primary--main">{title}</span>
-			</h1>
+{#if title}
+	<div class="fixed-div">
+		<div class="header" style:background-image={`url('${imgSrc}')`}>
+			<div class="header__text-box">
+				<h1 class="heading-primary">
+					<span class="heading-primary--main">{title}</span>
+				</h1>
+			</div>
 		</div>
 	</div>
-</div>
+{/if}
 <div class="slot">
 	<slot />
 </div>
