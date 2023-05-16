@@ -51,6 +51,7 @@
 	onMount(() => {
 		mainSplide = mainSlide?.splide;
 		let thumbnailSplide = thumbnailSlide?.splide;
+		if (!mainSplide || !thumbnailSplide) return;
 		mainSplide.sync(thumbnailSplide);
 	});
 
