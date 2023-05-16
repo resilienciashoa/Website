@@ -1,6 +1,7 @@
 import TLRIID from './TLRIID.json';
 import Quimica from './Quimica.json';
 import Ingles from './Ingles.json';
+import Historia from './Historia.json';
 export function load({ params }) {
 	const obj = {};
 	if (params.materia === 'TLRIID') {
@@ -165,6 +166,25 @@ export function load({ params }) {
 
 		return obj;
 	}
+	if (params.materia === 'Historia') {
+		obj.materia = 'Historia';
+		obj.materiaImgSrc = '/Historia/Background.jfif';
+		if (params.specificProyecto === 'Video') {
+			obj.title = 'Video';
+			obj.description = Historia['Video'];
+			obj.images = [
+				{ html: '<video controls src="/Historia/video.mp4"></video>', thumbSrc: '/CEM/1.jpg' }
+			];
+			obj.hideControls = true;
+		}
+		if (params.specificProyecto === 'Diálogo') {
+			obj.title = 'Diálogo';
+			obj.description = Historia['Diálogo'];
+			obj.images = [{ src: '/Historia/Dialogos1.jpg' }, { src: '/Historia/Dialogos2.jpg' }];
+		}
+
+		return obj;
+	}
 	if (params.materia === 'Museo') {
 		obj.materia = 'CEM';
 		obj.materiaImgSrc = '/CEM/72.jpg';
@@ -175,6 +195,7 @@ export function load({ params }) {
 			obj.images = new Array(92).fill(undefined).map((_, i) => ({
 				src: `/CEM/${i + 1}.jpg`
 			}));
+			obj.backUrl = '/';
 		}
 
 		return obj;

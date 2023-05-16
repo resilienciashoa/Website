@@ -45,7 +45,7 @@
 	.text-and-icon {
 		padding: 3rem;
 		display: flex;
-		width: 100vw;
+		width: 100%;
 		font-size: 30px;
 		justify-content: space-between;
 		align-items: center;

@@ -1,11 +1,16 @@
 <script>
 	export let title;
 	export let imgSrc;
+	export let backUrl = '/';
+	import Feather from 'sveltekit-feather-icons/feather.svelte';
 </script>
 
 {#if title}
 	<div class="fixed-div">
 		<div class="header" style:background-image={`url('${imgSrc}')`}>
+			<a href={backUrl} class="back">
+				<Feather icon="arrow-left" size="50" />
+			</a>
 			<div class="header__text-box">
 				<h1 class="heading-primary">
 					<span class="heading-primary--main">{title}</span>
@@ -43,6 +48,17 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+	}
+	.back {
+		position: absolute;
+		top: 50%;
+		left: 1%;
+		transform: translate(-1%, -50%);
+		text-align: center;
+		color: #fff;
+	}
+	.back:hover {
+		color: #333;
 	}
 	.heading-primary {
 		color: #fff;

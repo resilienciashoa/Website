@@ -165,6 +165,28 @@ export function load({ params }) {
 				url: '/Museo/CEM'
 			}
 		];
+	} else if (materia === 'Historia') {
+		obj.title = 'Historia';
+		obj.imgSrc = '/Historia/Background.jfif';
+		obj.hoverColor = '#f59f00';
+		obj.specificProjects = [
+			{
+				title: 'Video',
+				imgSrc: '/Historia/VideoThumbnail.png',
+				imgMargin: '0% 0px 0px 0%',
+				imgWidth: '100%',
+				description: 'Sobre el contexto historico del Holocausto.',
+				url: '/Historia/Video'
+			},
+			{
+				title: 'Diálogo',
+				imgSrc: '/Historia/Dialogos1.jpg',
+				imgMargin: '-12% 0px 0px 0%',
+				imgWidth: '110%',
+				description: '“Conversación” entre sobrevivientes del Holocausto.',
+				url: '/Historia/Diálogo'
+			}
+		];
 	} else {
 		obj.title = 'ERROR';
 		obj.imgSrc = '/TLRIID/books.jpg';

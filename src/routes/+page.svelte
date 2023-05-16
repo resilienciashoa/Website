@@ -39,6 +39,7 @@
 {#each data.subjects as subject}
 	<Subject {...subject} />
 {/each}
+<p class="emuna">1ero de CCH, Yeshivat Emuná 2023</p>
 
 <style>
 	a:link,
@@ -47,7 +48,7 @@
 		display: block;
 		color: #d9480f;
 		/* background-color: #f2f2f2; */
-		font-size: 2rem;
+		font-size: 2.6rem;
 		text-decoration: none;
 		/* border-bottom: 1px solid currentColor; */
 		/* padding-bottom: 2px; */
@@ -56,5 +57,11 @@
 	a:hover,
 	a:active {
 		color: #000;
+	}
+	.emuna {
+		text-align: center;
+		font-size: 1.6rem;
+		color: #d9480f;
+		padding-bottom: 1rem;
 	}
 </style>

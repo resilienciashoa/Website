@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import Feather from 'sveltekit-feather-icons/feather.svelte';
 	import Modal, { bind } from 'svelte-simple-modal';
 	import { writable } from 'svelte/store';
@@ -7,15 +8,15 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-
 	const modal = writable(null);
 	const showModal = () => modal.set(bind(BigImage));
 	//const showModal = (obj) => console.log(obj);
-
 	import '@splidejs/splide/css/sea-green';
 
 	export let data;
-	let { title, materia, materiaImgSrc, images, description } = data;
+	let { title, materia, materiaImgSrc, images, description, backUrl, hideControls } = data;
+	let pathname = $page.url.pathname;
+	let finalUrl = backUrl || pathname.slice(0, pathname.lastIndexOf('/'));
 	let mainSlide;
 	let thumbnailSlide;
 	let mainOptions = {
@@ -90,32 +91,39 @@
 
 <svelte:window on:resize={setModalClose} />
 <Modal on:open={setModalImg} classWindow="modalWindow" show={$modal} />
-<MateriaTemplate title={materia} imgSrc={materiaImgSrc}>
+<MateriaTemplate backUrl={finalUrl} title={materia} imgSrc={materiaImgSrc}>
 	<div class="content">
 		<div class="content-center">
 			{#if browser}
-				<p class="zoomText">
-					<Feather icon="zoom-in" size="15" /> Haz click en la imagen para agrandar
-				</p>
+				{#if !hideControls}
+					<p class="zoomText">
+						<Feather icon="zoom-in" size="15" /> Haz click en la imagen para agrandar
+					</p>
+				{/if}
 				<Splide class="mainSlide" bind:this={mainSlide} options={mainOptions}>
 					{#each images as image}
 						<SplideSlide>
-							<img on:click={showModal} src={image.src} />
+							{#if image.html}
+								{@html image.html}
+							{:else}
+								<img on:click={showModal} src={image.src} />
+							{/if}
 						</SplideSlide>
 					{/each}
 				</Splide>
-
-				<Splide bind:this={thumbnailSlide} options={thumbnailOptions}>
-					{#each images as image}
-						<SplideSlide>
-							<img
-								style:margin={image.thumbImgMargin}
-								style:width={image.thumbImgWidth}
-								src={image.thumbSrc || image.src}
-							/>
-						</SplideSlide>
-					{/each}
-				</Splide>
+				{#if !hideControls}
+					<Splide bind:this={thumbnailSlide} options={thumbnailOptions}>
+						{#each images as image}
+							<SplideSlide>
+								<img
+									style:margin={image.thumbImgMargin}
+									style:width={image.thumbImgWidth}
+									src={image.thumbSrc || image.src}
+								/>
+							</SplideSlide>
+						{/each}
+					</Splide>
+				{/if}
 			{/if}
 		</div>
 		<div class="padding">
