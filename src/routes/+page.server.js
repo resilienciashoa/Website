@@ -5,7 +5,7 @@ export function load() {
 		color: '#37b24d',
 		title: 'Lectura y Redacción',
 		description:
-			'Investigación sobre los principales autores y obras acerca del Holocausto, ademas de un análisis de los géneros literarios y las motivaciones al escribir. <br> Tambien un pequeño estudio sobre el debate acerca de la ficcion historica en el Holocausto y reseñas sobre los libros leídos en clase.',
+			'Investigación sobre los principales autores y obras acerca del Holocausto, ademas de un análisis de los géneros literarios y las motivaciones al escribir. <br> Tambien un pequeño estudio sobre el debate acerca de la ficción histórica en el Holocausto y reseñas sobre los libros leídos en clase.',
 		link: 'TLRIID'
 	});
 	subjects.push({
