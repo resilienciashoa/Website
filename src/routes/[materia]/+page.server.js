@@ -64,12 +64,12 @@ export function load({ params }) {
 				url: '/Química/La-alimentacion-en-los-campos-de-concentracion'
 			},
 			{
-				title: 'Vías Metabólicas',
+				title: 'Vías metabólicas',
 				imgSrc: '/Química/Vias-Metabolicas.jpg',
 				imgMargin: '-15% 0px 0px -15%',
 				imgWidth: '160%',
 				description: 'Glucolisis.',
-				url: '/Química/Vias-Metabolicas'
+				url: '/Química/Vias-metabólicas'
 			},
 			{
 				title: 'Macronutrientes y micronutrientes',
@@ -93,13 +93,13 @@ export function load({ params }) {
 		obj.imgSrc = '/Inglés/Map.jpg';
 		obj.hoverColor = '#ae3ec9';
 		obj.specificProjects = [
-            {
-				title: 'Cordinación General',
+			{
+				title: 'Cordinación general',
 				imgSrc: '/Inglés/Cordinación/1.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
 				description: 'Dirección y organización de todas las áreas del proyecto.',
-				url: '/Inglés/Cordinación-General'
+				url: '/Inglés/Cordinación-general'
 			},
 			{
 				title: 'Poema Inicial',
@@ -126,22 +126,22 @@ export function load({ params }) {
 				url: '/Inglés/Palabras-de-Torá'
 			},
 			{
-				title: 'Ejemplos de Resiliencia',
+				title: 'Ejemplos de resiliencia',
 				imgSrc: '/Inglés/Examples-of-Resilience.jpg',
 				imgMargin: '-10% 0px 0px -15%',
 				imgWidth: '130%',
 				description: 'Diferentes personajes del Holocausto',
-				url: '/Inglés/Ejemplos-de-Resiliencia'
+				url: '/Inglés/Ejemplos-de-resiliencia'
 			},
 			{
-				title: 'Interpretación de Testimonios',
+				title: 'Interpretación de testimonios',
 				imgSrc: '/Inglés/Interpretación/1.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
 				description: '“Performance” en Inglés.',
-				url: '/Inglés/Interpretación-de-Testimonios'
+				url: '/Inglés/Interpretación-de-testimonios'
 			},
-            {
+			{
 				title: 'Conclusión',
 				imgSrc: '/Inglés/Conclusiones.jpg',
 				imgMargin: '-10% 0px 0px -15%',
@@ -149,7 +149,7 @@ export function load({ params }) {
 				description:
 					'Palabras de cierre basadas en todo el aprendizaje obtenido durante el proyecto.',
 				url: '/Inglés/Conclusión'
-			},
+			}
 		];
 	} else if (materia === 'Museo') {
 		obj.title = 'Museo';

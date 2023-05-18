@@ -20,7 +20,7 @@ export function load() {
 		color: '#f59f00',
 		title: 'Historia',
 		description:
-			'Composición de “miniobra de teatro” que recrean una entrevista en la cual tres sobrevivientes de los campos de concentración platican sus experiencias, junto con un video introductorio sobre el tema del proyecto. <br> Además de una serie de cartulinas que abarcan el marco teórico del Holocausto.'
+			'Composición de “miniobra de teatro” que recrea una entrevista en la cual tres sobrevivientes de los campos de concentración platican sus experiencias, junto con un video introductorio sobre el tema del proyecto. <br> Además de una serie de cartulinas que abarcan el marco teórico del Holocausto.'
 	});
 	subjects.push({
 		iconName: 'compass',
