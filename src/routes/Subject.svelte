@@ -20,7 +20,7 @@
 			<Feather icon={iconName} size="70" />
 		</div>
 	</div>
-	<a href={link} class="more" style:color>Ver Mas</a>
+	<a href={link} class="more" style:color>Ver Más</a>
 </div>
 
 <style>

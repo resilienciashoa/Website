@@ -25,12 +25,12 @@ export function load({ params }) {
 				url: '/TLRIID/Para-que-escribir'
 			},
 			{
-				title: 'Géneros Utilizados',
+				title: 'Géneros utilizados',
 				imgSrc: '/TLRIID/18.png',
 				imgMargin: '-5.2% 0px 0px -15%',
 				imgWidth: '180%',
 				description: '¿Cuál fue el género más utilizado? ¿Por qué?',
-				url: '/TLRIID/Generos-Utilizados'
+				url: '/TLRIID/Generos-utilizados'
 			},
 			{
 				title: 'Autores tras el Holocausto',
@@ -46,7 +46,7 @@ export function load({ params }) {
 				imgMargin: '-14% 0px 0px -24.7%',
 				imgWidth: '150%',
 				description:
-					'Líneas del tiempo e Infografías sobre diferentes tipos de artistas relacionados al Holocausto',
+					'Líneas del tiempo e infografías sobre diferentes tipos de artistas relacionados al Holocausto',
 				url: '/TLRIID/Artistas-relacionados-al-Holocausto'
 			}
 		];

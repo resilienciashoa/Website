@@ -21,9 +21,9 @@ export function load({ params }) {
 				src: `/TLRIID/${i + 12}.png`
 			}));
 		}
-		if (params.specificProyecto === 'Generos-Utilizados') {
-			obj.title = 'Géneros Utilizados';
-			obj.description = TLRIID['Generos-Utilizados'];
+		if (params.specificProyecto === 'Generos-utilizados') {
+			obj.title = 'Géneros utilizados';
+			obj.description = TLRIID['Generos-utilizados'];
 			obj.images = new Array(2).fill(undefined).map((_, i) => ({
 				src: `/TLRIID/${i + 17}.png`
 			}));
@@ -189,7 +189,7 @@ export function load({ params }) {
 		obj.materia = 'CEM';
 		obj.materiaImgSrc = '/CEM/72.jpg';
 		if (params.specificProyecto === 'CEM') {
-			obj.title = 'Visita al museo';
+			obj.title = 'Visita al Museo';
 			obj.description =
 				'<p>Salida de Campo al Centro de Estudios Multisensorial Sobre el Holocausto ubicado en la Sefaradi.</p>';
 			obj.images = new Array(92).fill(undefined).map((_, i) => ({
