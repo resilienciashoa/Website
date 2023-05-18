@@ -25,12 +25,12 @@ export function load({ params }) {
 				url: '/TLRIID/Para-que-escribir'
 			},
 			{
-				title: 'Géneros Utilizados',
+				title: 'Géneros utilizados',
 				imgSrc: '/TLRIID/18.png',
 				imgMargin: '-5.2% 0px 0px -15%',
 				imgWidth: '180%',
 				description: '¿Cuál fue el género más utilizado? ¿Por qué?',
-				url: '/TLRIID/Generos-Utilizados'
+				url: '/TLRIID/Generos-utilizados'
 			},
 			{
 				title: 'Autores tras el Holocausto',
@@ -46,7 +46,7 @@ export function load({ params }) {
 				imgMargin: '-14% 0px 0px -24.7%',
 				imgWidth: '150%',
 				description:
-					'Líneas del tiempo e Infografías sobre diferentes tipos de artistas relacionados al Holocausto',
+					'Líneas del tiempo e infografías sobre diferentes tipos de artistas relacionados al Holocausto',
 				url: '/TLRIID/Artistas-relacionados-al-Holocausto'
 			}
 		];
@@ -64,12 +64,12 @@ export function load({ params }) {
 				url: '/Química/La-alimentacion-en-los-campos-de-concentracion'
 			},
 			{
-				title: 'Vías Metabólicas',
+				title: 'Vías metabólicas',
 				imgSrc: '/Química/Vias-Metabolicas.jpg',
 				imgMargin: '-15% 0px 0px -15%',
 				imgWidth: '160%',
 				description: 'Glucolisis.',
-				url: '/Química/Vias-Metabolicas'
+				url: '/Química/Vias-metabólicas'
 			},
 			{
 				title: 'Macronutrientes y micronutrientes',
@@ -94,6 +94,14 @@ export function load({ params }) {
 		obj.hoverColor = '#ae3ec9';
 		obj.specificProjects = [
 			{
+				title: 'Cordinación general',
+				imgSrc: '/Inglés/Cordinación/1.png',
+				imgMargin: '0% 0px 0px 0%',
+				imgWidth: '100%',
+				description: 'Dirección y organización de todas las áreas del proyecto.',
+				url: '/Inglés/Cordinación-general'
+			},
+			{
 				title: 'Poema Inicial',
 				imgSrc: '/Inglés/Why-we-must/16.png',
 				imgMargin: '0% 0px 0px 0%',
@@ -106,7 +114,7 @@ export function load({ params }) {
 				imgSrc: '/Inglés/IntroJustification/18.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
-				description: 'Introducción y Justificación.',
+				description: 'Introducción y justificación.',
 				url: '/Inglés/Prólogo'
 			},
 			{
@@ -118,6 +126,22 @@ export function load({ params }) {
 				url: '/Inglés/Palabras-de-Torá'
 			},
 			{
+				title: 'Ejemplos de resiliencia',
+				imgSrc: '/Inglés/Examples-of-Resilience.jpg',
+				imgMargin: '-10% 0px 0px -15%',
+				imgWidth: '130%',
+				description: 'Diferentes personajes del Holocausto',
+				url: '/Inglés/Ejemplos-de-resiliencia'
+			},
+			{
+				title: 'Interpretación de testimonios',
+				imgSrc: '/Inglés/Interpretación/1.png',
+				imgMargin: '0% 0px 0px 0%',
+				imgWidth: '100%',
+				description: '“Performance” en Inglés.',
+				url: '/Inglés/Interpretación-de-testimonios'
+			},
+			{
 				title: 'Conclusión',
 				imgSrc: '/Inglés/Conclusiones.jpg',
 				imgMargin: '-10% 0px 0px -15%',
@@ -125,30 +149,6 @@ export function load({ params }) {
 				description:
 					'Palabras de cierre basadas en todo el aprendizaje obtenido durante el proyecto.',
 				url: '/Inglés/Conclusión'
-			},
-			{
-				title: 'Ejemplos de Resiliencia',
-				imgSrc: '/Inglés/Examples-of-Resilience.jpg',
-				imgMargin: '-10% 0px 0px -15%',
-				imgWidth: '130%',
-				description: 'Diferentes personajes del holocausto',
-				url: '/Inglés/Ejemplos-de-Resiliencia'
-			},
-			{
-				title: 'Cordinación General',
-				imgSrc: '/Inglés/Cordinación/1.png',
-				imgMargin: '0% 0px 0px 0%',
-				imgWidth: '100%',
-				description: 'Dirección y organización de todas las áreas del proyecto.',
-				url: '/Inglés/Cordinación-General'
-			},
-			{
-				title: 'Interpretación de Testimonios',
-				imgSrc: '/Inglés/Interpretación/1.png',
-				imgMargin: '0% 0px 0px 0%',
-				imgWidth: '100%',
-				description: '“Performance” en Inglés.',
-				url: '/Inglés/Interpretación-de-Testimonios'
 			}
 		];
 	} else if (materia === 'Museo') {
@@ -175,7 +175,7 @@ export function load({ params }) {
 				imgSrc: '/Historia/VideoThumbnail.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
-				description: 'Sobre el contexto historico del Holocausto.',
+				description: 'Sobre el contexto histórico del Holocausto.',
 				url: '/Historia/Video'
 			},
 			{

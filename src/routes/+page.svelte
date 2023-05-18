@@ -39,7 +39,7 @@
 {#each data.subjects as subject}
 	<Subject {...subject} />
 {/each}
-<p class="emuna">1ero de CCH, Yeshivat Emuná 2023</p>
+<p class="emuna">1ero de CCH, Yeshivat Emuná, 2023</p>
 
 <style>
 	a:link,

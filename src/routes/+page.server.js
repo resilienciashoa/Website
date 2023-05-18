@@ -5,7 +5,7 @@ export function load() {
 		color: '#37b24d',
 		title: 'Lectura y Redacción',
 		description:
-			'Investigación sobre los principales autores y obras acerca del Holocausto, ademas de un análisis de los géneros literarios y las motivaciones al escribir. <br> Tambien un pequeño estudio sobre el debate acerca de la ficcion historica en el Holocausto y reseñas sobre los libros leídos en clase.',
+			'Investigación sobre los principales autores y obras acerca del Holocausto, ademas de un análisis de los géneros literarios y las motivaciones al escribir. <br> Tambien un pequeño estudio sobre el debate acerca de la ficción histórica en el Holocausto y reseñas sobre los libros leídos en clase.',
 		link: 'TLRIID'
 	});
 	subjects.push({
@@ -20,7 +20,7 @@ export function load() {
 		color: '#f59f00',
 		title: 'Historia',
 		description:
-			'Composición de “miniobra de teatro” que trata de una entrevista en la cual tres sobrevivientes de los campos de concentración platican sus experiencias, junto con un video introductorio al tema del proyecto. <br> Además de una serie de cartulinas que abarcan el marco teorico del holocausto.'
+			'Composición de “miniobra de teatro” que recrea una entrevista en la cual tres sobrevivientes de los campos de concentración platican sus experiencias, junto con un video introductorio sobre el tema del proyecto. <br> Además de una serie de cartulinas que abarcan el marco teórico del Holocausto.'
 	});
 	subjects.push({
 		iconName: 'compass',
@@ -34,7 +34,7 @@ export function load() {
 		color: '#ae3ec9',
 		title: 'Química',
 		description:
-			'Investigación sobre los macronutrientes y micronutrientes y ejemplos y que aportan al organismo, también se investigó sobre las calorías necesarias de una persona para sobrevivir y la dieta de la gente en los campos de concentración.'
+			'Investigación sobre los macronutrientes y micronutrientes asi como ejemplos de los mismos y explicación de lo que aportan al organismo. También se investigó sobre las calorías que necesita una persona para sobrevivir y la dieta de la gente en los campos de concentración.'
 	});
 	subjects.push({
 		iconName: 'hard-drive',

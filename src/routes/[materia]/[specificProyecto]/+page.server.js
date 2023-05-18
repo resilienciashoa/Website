@@ -21,9 +21,9 @@ export function load({ params }) {
 				src: `/TLRIID/${i + 12}.png`
 			}));
 		}
-		if (params.specificProyecto === 'Generos-Utilizados') {
-			obj.title = 'Géneros Utilizados';
-			obj.description = TLRIID['Generos-Utilizados'];
+		if (params.specificProyecto === 'Generos-utilizados') {
+			obj.title = 'Géneros utilizados';
+			obj.description = TLRIID['Generos-utilizados'];
 			obj.images = new Array(2).fill(undefined).map((_, i) => ({
 				src: `/TLRIID/${i + 17}.png`
 			}));
@@ -52,9 +52,9 @@ export function load({ params }) {
 				src: `/Química/${i + 1}.png`
 			}));
 		}
-		if (params.specificProyecto === 'Vias-Metabolicas') {
-			obj.title = 'Vías Metabólicas';
-			obj.description = Quimica['Vias-Metabolicas'];
+		if (params.specificProyecto === 'Vias-metabólicas') {
+			obj.title = 'Vías metabólicas';
+			obj.description = Quimica['Vias-metabólicas'];
 			obj.images = [
 				{
 					src: `/Química/Vias-Metabolicas.jpg`,
@@ -134,9 +134,9 @@ export function load({ params }) {
 				}
 			];
 		}
-		if (params.specificProyecto === 'Ejemplos-de-Resiliencia') {
-			obj.title = 'Ejemplos de Resiliencia';
-			obj.description = Ingles['Ejemplos-de-Resiliencia'];
+		if (params.specificProyecto === 'Ejemplos-de-resiliencia') {
+			obj.title = 'Ejemplos de resiliencia';
+			obj.description = Ingles['Ejemplos-de-resiliencia'];
 			obj.images = [
 				{
 					src: '/Inglés/Examples-of-Resilience.jpg',
@@ -145,17 +145,17 @@ export function load({ params }) {
 				}
 			];
 		}
-		if (params.specificProyecto === 'Cordinación-General') {
-			obj.title = 'Cordinación General';
-			obj.description = Ingles['Cordinación-General'];
+		if (params.specificProyecto === 'Cordinación-general') {
+			obj.title = 'Cordinación general';
+			obj.description = Ingles['Cordinación-general'];
 			obj.images = new Array(3).fill(undefined).map((_, i) => ({
 				src: `/Inglés/Cordinación/${i + 2}.jpg`
 			}));
 			obj.images.unshift({ src: '/Inglés/Cordinación/1.png' });
 		}
-		if (params.specificProyecto === 'Interpretación-de-Testimonios') {
-			obj.title = 'Interpretación de Testimonios';
-			obj.description = Ingles['Interpretación-de-Testimonios'];
+		if (params.specificProyecto === 'Interpretación-de-testimonios') {
+			obj.title = 'Interpretación de testimonios';
+			obj.description = Ingles['Interpretación-de-testimonios'];
 			obj.images = [
 				{ src: '/Inglés/Interpretación/1.png' },
 				{ src: '/Inglés/Interpretación/2.png' },
@@ -189,7 +189,7 @@ export function load({ params }) {
 		obj.materia = 'CEM';
 		obj.materiaImgSrc = '/CEM/72.jpg';
 		if (params.specificProyecto === 'CEM') {
-			obj.title = 'Visita al museo';
+			obj.title = 'Visita al Museo';
 			obj.description =
 				'<p>Salida de Campo al Centro de Estudios Multisensorial Sobre el Holocausto ubicado en la Sefaradi.</p>';
 			obj.images = new Array(92).fill(undefined).map((_, i) => ({
