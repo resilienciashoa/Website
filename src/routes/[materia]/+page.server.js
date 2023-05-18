@@ -93,6 +93,14 @@ export function load({ params }) {
 		obj.imgSrc = '/Inglés/Map.jpg';
 		obj.hoverColor = '#ae3ec9';
 		obj.specificProjects = [
+            {
+				title: 'Cordinación General',
+				imgSrc: '/Inglés/Cordinación/1.png',
+				imgMargin: '0% 0px 0px 0%',
+				imgWidth: '100%',
+				description: 'Dirección y organización de todas las áreas del proyecto.',
+				url: '/Inglés/Cordinación-General'
+			},
 			{
 				title: 'Poema Inicial',
 				imgSrc: '/Inglés/Why-we-must/16.png',
@@ -106,7 +114,7 @@ export function load({ params }) {
 				imgSrc: '/Inglés/IntroJustification/18.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
-				description: 'Introducción y Justificación.',
+				description: 'Introducción y justificación.',
 				url: '/Inglés/Prólogo'
 			},
 			{
@@ -118,29 +126,12 @@ export function load({ params }) {
 				url: '/Inglés/Palabras-de-Torá'
 			},
 			{
-				title: 'Conclusión',
-				imgSrc: '/Inglés/Conclusiones.jpg',
-				imgMargin: '-10% 0px 0px -15%',
-				imgWidth: '130%',
-				description:
-					'Palabras de cierre basadas en todo el aprendizaje obtenido durante el proyecto.',
-				url: '/Inglés/Conclusión'
-			},
-			{
 				title: 'Ejemplos de Resiliencia',
 				imgSrc: '/Inglés/Examples-of-Resilience.jpg',
 				imgMargin: '-10% 0px 0px -15%',
 				imgWidth: '130%',
-				description: 'Diferentes personajes del holocausto',
+				description: 'Diferentes personajes del Holocausto',
 				url: '/Inglés/Ejemplos-de-Resiliencia'
-			},
-			{
-				title: 'Cordinación General',
-				imgSrc: '/Inglés/Cordinación/1.png',
-				imgMargin: '0% 0px 0px 0%',
-				imgWidth: '100%',
-				description: 'Dirección y organización de todas las áreas del proyecto.',
-				url: '/Inglés/Cordinación-General'
 			},
 			{
 				title: 'Interpretación de Testimonios',
@@ -149,7 +140,16 @@ export function load({ params }) {
 				imgWidth: '100%',
 				description: '“Performance” en Inglés.',
 				url: '/Inglés/Interpretación-de-Testimonios'
-			}
+			},
+            {
+				title: 'Conclusión',
+				imgSrc: '/Inglés/Conclusiones.jpg',
+				imgMargin: '-10% 0px 0px -15%',
+				imgWidth: '130%',
+				description:
+					'Palabras de cierre basadas en todo el aprendizaje obtenido durante el proyecto.',
+				url: '/Inglés/Conclusión'
+			},
 		];
 	} else if (materia === 'Museo') {
 		obj.title = 'Museo';
@@ -175,7 +175,7 @@ export function load({ params }) {
 				imgSrc: '/Historia/VideoThumbnail.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
-				description: 'Sobre el contexto historico del Holocausto.',
+				description: 'Sobre el contexto histórico del Holocausto.',
 				url: '/Historia/Video'
 			},
 			{
