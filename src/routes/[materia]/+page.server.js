@@ -187,6 +187,50 @@ export function load({ params }) {
 				url: '/Historia/Diálogo'
 			}
 		];
+	} else if (materia === 'Matemáticas') {
+		obj.title = 'Matemáticas';
+		obj.imgSrc = '/Matemáticas/Background.jpg';
+		obj.hoverColor = '#1c7ed6';
+		obj.specificProjects = [
+			{
+				title: 'Cálculos y estadísticas',
+				imgSrc: '/Matemáticas/9.png',
+				imgMargin: '0% 0px 0px 0%',
+				imgWidth: '100%',
+				description: 'Gráficos con información sobre el Holocausto en general.',
+				url: '/Matemáticas/Cálculos-y-estadísticas'
+			},
+			{
+				title: 'Modelo 3D',
+				imgSrc: '/Matemáticas/3D-thumbnail.png',
+				imgMargin: '-5% 0px 0px 0%',
+				imgWidth: '120%',
+				description: 'De un escondite.',
+				url: '/Matemáticas/Modelo-3D'
+			}
+		];
+	} else if (materia === 'Computación') {
+		obj.title = 'Computación';
+		obj.imgSrc = '/Computación/Background.jfif';
+		obj.hoverColor = '#4263eb';
+		obj.specificProjects = [
+			{
+				title: 'Modelo 3D',
+				imgSrc: '/Matemáticas/3D-thumbnail.png',
+				imgMargin: '-5% 0px 0px 0%',
+				imgWidth: '120%',
+				description: 'De un escondite.',
+				url: '/Computación/Modelo-3D'
+			},
+			{
+				title: 'Palabras de resiliencia',
+				imgSrc: '/Computación/intro-thumbnail.png',
+				imgMargin: '0% 0px 0px 0%',
+				imgWidth: '100%',
+				description: '',
+				url: '/Computación/Palabras-de-resiliencia'
+			}
+		];
 	} else {
 		obj.title = 'ERROR';
 		obj.imgSrc = '/TLRIID/books.jpg';
