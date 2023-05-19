@@ -93,14 +93,14 @@ export function load({ params }) {
 		obj.imgSrc = '/Inglés/Map.jpg';
 		obj.hoverColor = '#ae3ec9';
 		obj.specificProjects = [
-			{
+			/* {
 				title: 'Cordinación general',
 				imgSrc: '/Inglés/Cordinación/1.png',
 				imgMargin: '0% 0px 0px 0%',
 				imgWidth: '100%',
 				description: 'Dirección y organización de todas las áreas del proyecto.',
 				url: '/Inglés/Cordinación-general'
-			},
+			}, */
 			{
 				title: 'Poema Inicial',
 				imgSrc: '/Inglés/Why-we-must/16.png',
