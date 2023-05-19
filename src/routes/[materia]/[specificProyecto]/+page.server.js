@@ -191,7 +191,7 @@ export function load({ params }) {
 			obj.title = 'Visita al Museo';
 			obj.description =
 				'<p>Salida de Campo al Centro de Estudios Multisensorial Sobre el Holocausto ubicado en la Sefaradi.</p>';
-			obj.images = new Array(92).fill(undefined).map((_, i) => ({
+			obj.images = new Array(91).fill(undefined).map((_, i) => ({
 				src: `/CEM/${i + 1}.jpg`
 			}));
 			obj.backUrl = '/';
