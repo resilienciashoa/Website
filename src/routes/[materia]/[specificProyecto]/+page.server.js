@@ -2,6 +2,7 @@ import TLRIID from './TLRIID.json';
 import Quimica from './Quimica.json';
 import Ingles from './Ingles.json';
 import Historia from './Historia.json';
+import Matematicas from './Matematicas.json';
 export function load({ params }) {
 	const obj = {};
 	if (params.materia === 'TLRIID') {
@@ -172,9 +173,7 @@ export function load({ params }) {
 		if (params.specificProyecto === 'Video') {
 			obj.title = 'Video';
 			obj.description = Historia['Video'];
-			obj.images = [
-				{ html: '<video controls src="/Historia/video.mp4"></video>', thumbSrc: '/CEM/1.jpg' }
-			];
+			obj.images = [{ html: '<video controls src="/Historia/video.mp4"></video>' }];
 			obj.hideControls = true;
 		}
 		if (params.specificProyecto === 'Diálogo') {
@@ -196,6 +195,42 @@ export function load({ params }) {
 				src: `/CEM/${i + 1}.jpg`
 			}));
 			obj.backUrl = '/';
+		}
+		return obj;
+	}
+	if (params.materia === 'Matemáticas') {
+		obj.materia = 'Matemáticas';
+		obj.materiaImgSrc = '/Matemáticas/Background.jpg';
+		if (params.specificProyecto === 'Cálculos-y-estadísticas') {
+			obj.title = 'Cálculos y estadísticas';
+			obj.description = Matematicas['Cálculos-y-estadísticas'];
+			obj.images = new Array(10).fill(undefined).map((_, i) => ({
+				src: `/Matemáticas/${i + 1}.png`
+			}));
+		}
+		if (params.specificProyecto === 'Modelo-3D') {
+			obj.title = 'Modelo 3D';
+			obj.description = Matematicas['Modelo-3D'];
+			obj.images = [{ html: '<video controls src="/Matemáticas/3D.mp4"></video>' }];
+			obj.hideControls = true;
+		}
+
+		return obj;
+	}
+	if (params.materia === 'Computación') {
+		obj.materia = 'Computación';
+		obj.materiaImgSrc = '/Computación/Background.jfif';
+		if (params.specificProyecto === 'Modelo-3D') {
+			obj.title = 'Modelo 3D';
+			obj.description = Matematicas['Modelo-3D'];
+			obj.images = [{ html: '<video controls src="/Matemáticas/3D.mp4"></video>' }];
+			obj.hideControls = true;
+		}
+		if (params.specificProyecto === 'Palabras-de-resiliencia') {
+			obj.title = 'Palabras de resiliencia';
+			obj.description = '';
+			obj.images = [{ html: '<video controls src="/Computación/intro.mp4"></video>' }];
+			obj.hideControls = true;
 		}
 
 		return obj;

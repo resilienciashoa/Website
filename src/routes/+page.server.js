@@ -13,7 +13,7 @@ export function load() {
 		color: '#1c7ed6',
 		title: 'Matemáticas',
 		description:
-			'Investigación y graficación de varios datos relacionados con el tema del holocausto. <br> Tambien un analisis sobre las dimensiones de algunos escondites durante el holocausto con un enfoque en un arbol particular.'
+			'Investigación y presentación de representaciones gráficas de varios datos relacionados con el tema del Holocausto. <br> Tambien un analisis sobre las dimensiones de algunos escondites durante el Holocausto con un enfoque en un arbol particular.'
 	});
 	subjects.push({
 		iconName: 'book',
@@ -41,7 +41,7 @@ export function load() {
 		color: '#4263eb',
 		title: 'Computación',
 		description:
-			'Apoyo a la parte visual y tecnológica del proyecto. <br> Creación de un modelo 3D sobre un escondite durante el holocausto.'
+			'Apoyo a la parte visual y tecnológica del proyecto. <br> Creación de un modelo 3D sobre un escondite durante el Holocausto.'
 	});
 	subjects
 		.filter((subject, index) => index % 2 === 0)
